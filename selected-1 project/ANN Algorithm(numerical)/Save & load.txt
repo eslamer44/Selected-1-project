@@ -1,0 +1,12 @@
+// save model
+model.save('my_model.h5',save_format='h5')
+ 
+
+// load model
+from keras import models
+ 
+c=models.load_model('my_model.h5')
+ 
+c.load_weights('weights.h5')
+ 
+c.predict(np.array([[1,1]]))
